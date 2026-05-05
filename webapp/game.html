@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bingo - Game</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="game-header">
+            <div class="header-top">
+                <div class="game-title">🎱 BINGO</div>
+                <div class="header-stats">
+                    <span id="game-number">1/1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="stats-row">
+            <div class="stat">
+                <div class="stat-value" id="stat-players">0</div>
+                <div class="stat-label">Players</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="stat-bet">10</div>
+                <div class="stat-label">Bet</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="stat-call">0</div>
+                <div class="stat-label">Call</div>
+            </div>
+        </div>
+
+        <!-- Reference Grid -->
+        <div class="reference-grid-section">
+            <div class="section-title">CALLED NUMBERS</div>
+            <table class="ref-grid" id="ref-grid"></table>
+        </div>
+
+        <!-- Current Call -->
+        <div class="current-call-section">
+            <div class="current-call-label">CURRENT CALL</div>
+            <div class="current-call-ball" id="current-call-ball">---</div>
+            <div class="recent-calls" id="recent-calls"></div>
+        </div>
+
+        <!-- Player's Card -->
+        <div class="player-card-section">
+            <div class="player-card-label">YOUR CARD</div>
+            <div class="card-number-badge">Card #<span id="card-num">---</span></div>
+            <div class="bingo-card" id="bingo-card-container"></div>
+        </div>
+
+        <!-- BINGO Button -->
+        <div class="bingo-button-section">
+            <button class="bingo-btn" id="bingo-btn" onclick="pressBingo()">
+                🔴 BINGO!
+            </button>
+        </div>
+
+        <!-- Winner Overlay -->
+        <div class="winner-overlay" id="winner-overlay" style="display:none;">
+            <div class="winner-dialog">
+                <div class="trophy">🏆</div>
+                <div class="congrats">BINGO!</div>
+                <div class="winner-name" id="winner-name-display"></div>
+                <div class="win-type" id="win-type-display"></div>
+                <div class="prize" id="prize-display"></div>
+                <div class="countdown-text">Next round in <strong id="countdown-timer">6</strong> seconds</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="/static/js/game.js"></script>
+</body>
+</html>
