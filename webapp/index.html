@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bingo - Select Card</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="game-header">
+            <div class="header-top">
+                <div class="game-title">🎱 BINGO</div>
+                <div class="header-stats">
+                    <span id="header-players">0</span> players
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="lobby-stats">
+            <div class="lobby-stat">
+                <div class="lobby-stat-value players" id="players-count">0</div>
+                <div class="lobby-stat-label">Players</div>
+            </div>
+            <div class="lobby-stat">
+                <div class="lobby-stat-value time" id="time-left">--</div>
+                <div class="lobby-stat-label">Seconds</div>
+            </div>
+            <div class="lobby-stat">
+                <div class="lobby-stat-value pot" id="pot-amount">0</div>
+                <div class="lobby-stat-label">Pot (ETB)</div>
+            </div>
+        </div>
+
+        <!-- Card Selection -->
+        <div class="card-selection-area" id="selection-area">
+            <div class="card-selection-title">Select Your Card (1 - 400)</div>
+            <div class="card-number-grid" id="card-grid"></div>
+            <div class="pagination-controls" id="pagination"></div>
+            <button class="confirm-btn" id="confirm-btn" style="display:none;" onclick="confirmCard()">
+                ✅ JOIN ROUND - 10 ETB
+            </button>
+        </div>
+
+        <div class="message-area" id="message-area"></div>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="/static/js/lobby.js"></script>
+</body>
+</html>
